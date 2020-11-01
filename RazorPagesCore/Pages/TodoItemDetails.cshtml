@@ -1,0 +1,38 @@
+﻿@page
+@model RazorPagesCore.Pages.TodoItemDetailsModel
+
+@{
+    ViewData["Title"] = "TodoItemDetails";
+    Layout = "~/Pages/Shared/_UserLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TodoItems</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TodoItems.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TodoItems.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TodoItems.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TodoItems.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TodoItems.Complited)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TodoItems.Complited)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="EditTodoItem" asp-route-id="@Model.TodoItems.Id">Edit</a> |
+    <a asp-page="TodoItem">Back to List</a>
+</div>

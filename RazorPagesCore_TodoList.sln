@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesCore", "RazorPagesCore\RazorPagesCore.csproj", "{FFE2858B-3791-40E0-9697-1AF1F409A554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesCore", "RazorPagesCore\RazorPagesCore.csproj", "{FFE2858B-3791-40E0-9697-1AF1F409A554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesCore.EF.DataAccessLib", "RazorPagesCore.EF.DataAccessLib\RazorPagesCore.EF.DataAccessLib.csproj", "{477707C8-A183-4EF5-8C0B-94BF573D09DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesCore.EF.DataAccessLib", "RazorPagesCore.EF.DataAccessLib\RazorPagesCore.EF.DataAccessLib.csproj", "{477707C8-A183-4EF5-8C0B-94BF573D09DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
