@@ -9,7 +9,7 @@
 <h1>Todo Items</h1>
 
 <p>
-    <a asp-page="CreateTodoItem">Create New</a>
+    <a asp-page="./Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -40,9 +40,9 @@
                     @Html.DisplayFor(modelItem => item.Complited)
                 </td>
                 <td>
-                    <a asp-page="EditTodoItem" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="TodoItemDetails" asp-route-id="@item.Id">Details</a> |
-                    <a asp-page="DeleteTodoItem" asp-route-id="@item.Id">Delete</a>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }

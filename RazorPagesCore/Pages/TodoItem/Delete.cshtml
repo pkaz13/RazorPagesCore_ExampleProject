@@ -1,15 +1,16 @@
 ﻿@page
-@model RazorPagesCore.Pages.TodoItemDetailsModel
+@model RazorPagesCore.Pages.TodoItemDeleteModel
 
 @{
-    ViewData["Title"] = "TodoItemDetails";
+    ViewData["Title"] = "DeleteTodoItem";
     Layout = "~/Pages/Shared/_UserLayout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Delete</h1>
 
+<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>TodoItems</h4>
+    <h4>Todo Items</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -31,8 +32,10 @@
             @Html.DisplayFor(model => model.TodoItems.Complited)
         </dd>
     </dl>
-</div>
-<div>
-    <a asp-page="EditTodoItem" asp-route-id="@Model.TodoItems.Id">Edit</a> |
-    <a asp-page="TodoItem">Back to List</a>
+
+    <form method="post">
+        <input type="hidden" asp-for="TodoItems.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
 </div>
