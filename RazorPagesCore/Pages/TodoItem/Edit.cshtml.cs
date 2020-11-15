@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesCore.EF.DataAccessLib.DataAccess;
 using RazorPagesCore.EF.DataAccessLib.Models;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ namespace RazorPagesCore.Pages
 {
     public class TodoItemEditModel : PageModel
     {
-        private readonly RazorPagesCore.EF.DataAccessLib.DataAccess.TodoListDataContext _context;
+        private readonly TodoListDataContext _context;
 
-        public TodoItemEditModel(RazorPagesCore.EF.DataAccessLib.DataAccess.TodoListDataContext context)
+        public TodoItemEditModel(TodoListDataContext context)
         {
             _context = context;
         }

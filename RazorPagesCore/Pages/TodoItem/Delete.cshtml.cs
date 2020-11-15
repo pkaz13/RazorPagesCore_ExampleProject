@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesCore.EF.DataAccessLib.DataAccess;
 using RazorPagesCore.EF.DataAccessLib.Models;
 using System.Threading.Tasks;
 
@@ -8,9 +9,9 @@ namespace RazorPagesCore.Pages
 {
     public class TodoItemDeleteModel : PageModel
     {
-        private readonly RazorPagesCore.EF.DataAccessLib.DataAccess.TodoListDataContext _context;
+        private readonly TodoListDataContext _context;
 
-        public TodoItemDeleteModel(RazorPagesCore.EF.DataAccessLib.DataAccess.TodoListDataContext context)
+        public TodoItemDeleteModel(TodoListDataContext context)
         {
             _context = context;
         }

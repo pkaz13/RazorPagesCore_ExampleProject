@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RazorPagesCore.EF.DataAccessLib.DataAccess;
 using RazorPagesCore.EF.DataAccessLib.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace RazorPagesCore.Pages
@@ -20,7 +21,7 @@ namespace RazorPagesCore.Pages
 
         public async Task OnGetAsync()
         {
-            TodoItems = await _context.TodoItems.ToListAsync();
+            TodoItems = await _context.TodoItems.Where(x => x.UserName == User.Identity.Name).ToListAsync();
         }
     }
 }
